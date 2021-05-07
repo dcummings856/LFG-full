@@ -1,7 +1,7 @@
 module.exports = {
-  getIndex: async (req, res) => {
+  getHome: async (req, res) => {
     try{
-      res.render('index.ejs')
+      res.render('home.ejs')
     }catch(err){
       console.log(err)
     }
