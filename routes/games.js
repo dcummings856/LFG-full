@@ -4,4 +4,6 @@ const tasksController = require('../controllers/games')
 
 router.get('/', tasksController.getSearch)
 
+router.get('/search/games', tasksController.getAllGames)
+
 module.exports = router
