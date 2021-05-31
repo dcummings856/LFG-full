@@ -12,9 +12,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use('/', homeRoute)
-app.use('/search', gamesRoute)
 app.use('/profile', profileRoute)
 
-app.listen(process.env.PORT, () => {
-  console.log('server running')
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`server running on ${PORT}`)
 })
