@@ -1,3 +1,5 @@
+const fetch = require('node-fetch')
+
 module.exports = {
   getProfile: async (req, res) => {
     try{
@@ -8,8 +10,12 @@ module.exports = {
   },
   searchGames: async (req, res) => {
     try{
-      let games = await fetch("https://game-info-api.herokuapp.com/api/games")
-      
+      fetch("https://game-info-api.herokuapp.com/api/games")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+      })
+      res.redirect('/profile')
     }catch(err){
       console.log(err)
     }
