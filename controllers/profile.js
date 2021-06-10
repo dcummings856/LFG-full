@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const Games = require('../models/Games')
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -15,7 +16,8 @@ module.exports = {
       .then((data) => {
         console.log(data)
       })
-      res.redirect('/profile')
+      const games = await Games.find()
+      res.render('profile.ejs', { games: games })
     }catch(err){
       console.log(err)
     }
