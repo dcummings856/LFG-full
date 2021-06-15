@@ -1,25 +1,17 @@
 const fetch = require('node-fetch')
-const Games = require('../models/Games')
 
 module.exports = {
   getProfile: async (req, res) => {
     try{
-      res.render('profile.ejs')
-    }catch(err){
-      console.log(err)
-    }
-  },
-  searchGames: async (req, res) => {
-    try{
-      fetch("https://game-info-api.herokuapp.com/api/games")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
+      const response = await fetch("https://api.rawg.io/api/games?key=2616f5758f784d868c63a14aa6ad4f69", {
+        "method": "GET",
       })
-      const games = await Games.find()
+      const results = await response.json()
+      console.log(results)
+      const games = await results
       res.render('profile.ejs', { games: games })
     }catch(err){
       console.log(err)
     }
-  }
+  },
 }
