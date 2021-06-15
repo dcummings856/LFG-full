@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
   <h1>Looking For Games</h1>
@@ -13,9 +14,15 @@
     <input type="text">
     <button type="submit">Search</button>
   </form>
-  <div>
+  <div id="games-container">
     <% games.results.forEach(game => { %>
-        <span><%- game.name %> </span>
+        <span id="game-name">
+          <%- game.name %> 
+        </span>
+        <span id="game-rating">
+          <%- game.rating %>
+        </span>
+          <img src= "<%- game.background_image %>" height="20%" width="20%">
       <% }) %>
       <!-- <%- games.results[0].slug %> -->
   </div>

@@ -1,0 +1,12 @@
+#games-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#game-name {
+  font-size: 3rem;
+}
+
+#game-rating {
+  font-size: 2rem;
+}
