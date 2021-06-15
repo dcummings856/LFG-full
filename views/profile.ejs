@@ -14,7 +14,10 @@
     <button type="submit">Search</button>
   </form>
   <div>
-    <%= games %>
+    <% games.results.forEach(game => { %>
+        <span><%- game.name %> </span>
+      <% }) %>
+      <!-- <%- games.results[0].slug %> -->
   </div>
 </body>
 </html>
