@@ -1,7 +1,14 @@
+const fetch = require('node-fetch')
+
 module.exports = {
   getHome: async (req, res) => {
     try{
-      res.render('home.ejs')
+      const response = await fetch("https://api.rawg.io/api/games?key=2616f5758f784d868c63a14aa6ad4f69", {
+        "method": "GET",
+      })
+      const games = await response.json()
+      console.log(games)
+      res.render('home.ejs', { games: games })
     }catch(err){
       console.log(err)
     }

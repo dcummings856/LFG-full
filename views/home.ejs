@@ -9,8 +9,20 @@
 <body>
   <h1>Welcome to <span>Looking For Games</span></h1>
   <a href='/profile'>Profile</a>
-  <div>
-    
-  </div>
+  <form action="/profile/search" method="GET">
+    <input type="text">
+    <button type="submit">Search</button>
+  </form>
+  <div id="games-container">
+    <% games.results.forEach(game => { %>
+        <span id="game-name">
+          <%- game.name %> 
+        </span>
+        <span id="game-rating">
+          <%- game.rating %>
+        </span>
+          <img src= "<%- game.background_image %>" height="10%" width="10%">
+      <% }) %>
+      <!-- <%- games.results[0].slug %> -->
 </body>
 </html>
