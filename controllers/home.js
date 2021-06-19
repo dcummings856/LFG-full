@@ -1,5 +1,6 @@
 const fetch = require('node-fetch')
 require('dotenv').config({path: './config/.env'})
+let PAGE = 1
 
 module.exports = {
   getHome: async (req, res) => {
@@ -16,9 +17,8 @@ module.exports = {
   },
   getNextPage: async (req, res) => {
     try{
-      let PAGE = 1
       PAGE++
-      console.log(PAGE)
+      // console.log(PAGE)
       const response = await fetch(`https://api.rawg.io/api/games?key=${process.env.KEY}&page=${PAGE}`, {
         "method": "GET",
       })
@@ -31,9 +31,12 @@ module.exports = {
   },
   getPrevPage: async (req, res) => {
     try{
-      let PAGE = 2
-      PAGE--
-      console.log(PAGE)
+      if (PAGE == 1){
+        PAGE = 1
+      } else {
+        PAGE--
+      }
+      // console.log(PAGE)
       const response = await fetch(`https://api.rawg.io/api/games?key=${process.env.KEY}&page=${PAGE}`, {
         "method": "GET",
       })
