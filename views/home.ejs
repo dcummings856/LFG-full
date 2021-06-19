@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
   <h1>Welcome to <span>Looking For Games</span></h1>
@@ -17,14 +18,15 @@
   <a href='/prevPage'>Previous</a>
   <div id="games-container">
     <% games.results.forEach(game => { %>
-        <span id="game-name">
-          <%- game.name %> 
-        </span>
-        <span id="game-rating">
-          <%- game.rating %>
-        </span>
-          <img src= "<%- game.background_image %>" height="10%" width="10%">
-      <% }) %>
+      <img id="games-image" src= "<%- game.background_image %>" height="10%" width="10%">
+      <a id="game-name">
+        <%- game.name %> 
+      </a>
+      <span id="game-rating">
+        <%- game.rating %>
+      </span>
+    <% }) %>
+  </div>
       <!-- <%- games.results[0].slug %> -->
 </body>
 </html>
