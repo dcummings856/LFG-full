@@ -55,7 +55,7 @@ module.exports = {
         "method": "GET",
       })
       const game = await response.json()
-      console.log(game)
+      // console.log(game)
       res.render('info.ejs', { game: game })
     }catch(err){
       console.log(err)
