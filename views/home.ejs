@@ -19,7 +19,7 @@
   <div id="games-container">
     <% games.results.forEach(game => { %>
       <img id="games-image" src= "<%- game.background_image %>" height="10%" width="10%">
-      <a id="game-name">
+      <a id="game-name" href="/gameinfo/<%= game.id %>">
         <%- game.name %> 
       </a>
       <span id="game-rating">
