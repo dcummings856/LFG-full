@@ -9,7 +9,6 @@ module.exports = {
         "method": "GET",
       })
       const games = await response.json()
-      // console.log(games)
       res.render('home.ejs', { games: games })
     }catch(err){
       console.log(err)
@@ -18,12 +17,10 @@ module.exports = {
   getNextPage: async (req, res) => {
     try{
       PAGE++
-      // console.log(PAGE)
       const response = await fetch(`https://api.rawg.io/api/games?key=${process.env.KEY}&page=${PAGE}`, {
         "method": "GET",
       })
       const games = await response.json()
-      // console.log(games)
       res.render('home.ejs', { games: games })
     }catch(err){
       console.log(err)
@@ -36,12 +33,10 @@ module.exports = {
       } else {
         PAGE--
       }
-      // console.log(PAGE)
       const response = await fetch(`https://api.rawg.io/api/games?key=${process.env.KEY}&page=${PAGE}`, {
         "method": "GET",
       })
       const games = await response.json()
-      // console.log(games)
       res.render('home.ejs', { games: games })
     }catch(err){
       console.log(err)
@@ -55,7 +50,6 @@ module.exports = {
         "method": "GET",
       })
       const game = await response.json()
-      // console.log(game)
       res.render('info.ejs', { game: game })
     }catch(err){
       console.log(err)
