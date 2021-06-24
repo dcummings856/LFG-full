@@ -1,10 +1,13 @@
 const express = require('express')
 const app = express()
 const PORT = 8000
+const connectDB = require("./config/database")
 const homeRoute = require('./routes/home')
 const profileRoute = require('./routes/profile')
 
 require('dotenv').config({path: './config/.env'})
+
+connectDB()
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
