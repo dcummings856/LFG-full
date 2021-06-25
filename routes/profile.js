@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const tasksController = require('../controllers/profile')
+const profileController = require('../controllers/profile')
 
-router.get('/', tasksController.getProfile)
+router.get('/', profileController.getProfile)
 
 module.exports = router

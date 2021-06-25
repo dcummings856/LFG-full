@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const tasksController = require('../controllers/home')
+const homeController = require('../controllers/home')
 
-router.get('/', tasksController.getHome)
-router.get('/nextPage', tasksController.getNextPage)
-router.get('/prevPage', tasksController.getPrevPage)
-router.get('/gameinfo/:gameID', tasksController.getGameInfo)
+router.get('/', homeController.getHome)
+router.get('/nextPage', homeController.getNextPage)
+router.get('/prevPage', homeController.getPrevPage)
+router.get('/gameinfo/:gameID', homeController.getGameInfo)
 
 
 module.exports = router
