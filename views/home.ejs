@@ -9,6 +9,7 @@
 </head>
 <body>
   <h1>Welcome to <span>Looking For Games</span></h1>
+  <a href='/login'>Login</a>
   <a href='/profile'>Profile</a>
   <form action="/profile/search" method="GET">
     <input type="text">
@@ -19,7 +20,7 @@
   <div id="games-container">
     <% games.results.forEach(game => { %>
       <img id="games-image" src= "<%- game.background_image %>" height="10%" width="10%">
-      <a id="game-name" href="/gameinfo/<%= game.id %>">
+      <a id="game-name" href="/info/<%= game.id %>">
         <%- game.name %> 
       </a>
       <span id="game-rating">
