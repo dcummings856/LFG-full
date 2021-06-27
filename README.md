@@ -22,7 +22,7 @@ It's hard to find people to play games with sometimes.  Friends are on different
 # Things to add
 
 - Create a `.env` file and add the following as `key = value`
-  - PORT = 3000 (can be any port)
+  - PORT = 8000 (can be any port)
   - DB_STRING = `your database URI`
 
 ---
