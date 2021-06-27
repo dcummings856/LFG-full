@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const GamesList = require('../models/GamesList')
 
 module.exports = {
   getProfile: async (req, res) => {
