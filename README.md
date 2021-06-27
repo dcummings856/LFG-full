@@ -8,7 +8,7 @@ It's hard to find people to play games with sometimes.  Friends are on different
 
 # Packages/Dependencies used
 
-> bcrypt, cloudinary, connect-mongo, dotenv, ejs, express, express-flash, express-session, method-override, mongodb, mongoose, morgan, multer, nodemon, passport, passport-local,
+> bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, method-override, mongodb, mongoose, morgan, nodemon, passport, passport-local,
 > validator
 
 ---
