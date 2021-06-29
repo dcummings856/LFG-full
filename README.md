@@ -1,4 +1,5 @@
-# LFG-full
+# LFG-full (WIP)
+This is my current project that is still in the process of being fully functional and deployed.
 
 # Looking for Gamers
 
