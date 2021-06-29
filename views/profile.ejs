@@ -15,16 +15,7 @@
     <button type="submit">Search</button>
   </form>
   <div id="games-container">
-    <% games.results.forEach(game => { %>
-        <span id="game-name">
-          <%- game.name %> 
-        </span>
-        <span id="game-rating">
-          <%- game.rating %>
-        </span>
-          <img src= "<%- game.background_image %>" height="10%" width="10%">
-      <% }) %>
-      <!-- <%- games.results[0].slug %> -->
+    <p> <%= list.microsoftId %></p>
   </div>
 </body>
 </html>
