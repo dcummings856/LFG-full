@@ -1,4 +1,5 @@
 const fetch = require('node-fetch')
+const GamesList = require('../models/GamesList')
 require('dotenv').config({path: './config/.env'})
 let PAGE = 1
 
@@ -51,6 +52,22 @@ module.exports = {
       })
       const game = await response.json()
       res.render('info.ejs', { game: game })
+    }catch(err){
+      console.log(err)
+    }
+  },
+  addGame: async (req, res) => {
+    try{
+      const gameID = req.params.gameID
+      const response = await fetch(`https://api.rawg.io/api/games/${gameID}?key=${process.env.KEY}`, {
+        "method": "GET",
+      })
+      const game = await response.json()
+      await GamesList.create({
+        title: game.name,
+        rating: game.rating,
+      })
+      res.redirect('/')
     }catch(err){
       console.log(err)
     }

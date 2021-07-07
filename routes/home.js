@@ -7,6 +7,7 @@ router.get('/', homeController.getHome)
 router.get('/nextPage', homeController.getNextPage)
 router.get('/prevPage', homeController.getPrevPage)
 router.get('/info/:gameID', homeController.getGameInfo)
+router.post('/add', homeController.addGame)
 
 router.get("/login", authController.getLogin)
 router.post("/login", authController.postLogin)
