@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const GamesListSchema = new mongoose.Schema({
+const GameListsSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -19,4 +19,4 @@ const GamesListSchema = new mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('GameList', GamesListSchema)
+module.exports = mongoose.model('GameLists', GameListsSchema)

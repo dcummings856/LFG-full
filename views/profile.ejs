@@ -16,7 +16,9 @@
   </form>
   <div id="games-container">
     <p> <%= user.userName %></p>
-    <span> <%= list.title%></span>
+    <% list.forEach(el => { %>
+      <span> <%= el.title %></span>
+    <% }) %>
   </div>
 </body>
 </html>

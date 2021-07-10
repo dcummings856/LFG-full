@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-const GamesList = require('../models/GamesList')
+const GameLists = require('../models/GameLists')
 require('dotenv').config({path: './config/.env'})
 let PAGE = 1
 
@@ -63,7 +63,7 @@ module.exports = {
         "method": "GET",
       })
       const game = await response.json()
-      await GamesList.create({
+      await GameLists.create({
         title: game.name,
         rating: game.rating,
       })
