@@ -66,6 +66,7 @@ module.exports = {
       await GameLists.create({
         title: game.name,
         rating: game.rating,
+        user: req.user.id,
       })
       res.redirect('/')
     }catch(err){
