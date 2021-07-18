@@ -16,4 +16,12 @@ module.exports = {
       console.log(err)
     }
   },
+  removeGame: async (req, res) => {
+    try{
+      await GameLists.remove ({ _id: req.params.id })
+      res.redirect('/profile')
+    }catch(err){
+      console.log(err)
+    }
+  },
 }

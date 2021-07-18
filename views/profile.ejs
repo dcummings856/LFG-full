@@ -18,6 +18,10 @@
     <p> <%= user.userName %></p>
     <% list.forEach(el => { %>
       <span id="user-list"> <%= el.title %></span>
+      <form action="/profile/remove/<%= el.id %>?_method=DELETE" 
+        method="POST">
+        <button type="submit">Remove</button>
+      </form>
     <% }) %>
   </div>
 </body>
