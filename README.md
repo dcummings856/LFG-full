@@ -3,7 +3,7 @@ This is my current project that is still in the process of being fully functiona
 
 # Looking for Gamers
 
-LFG is a social web app that allows gamers to meet new people to play with and share their gaming history and experience with each other.
+LFG is a social web app that allows gamers to meet new people to play with and share their gaming history and experience with each other. Uses RAWG API to get information about thousands of games.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 It's hard to find people to play games with sometimes.  Friends are on different schedules or just don't have the time they used to to play games. So I decided to create this app to help some people with this issue!
 
