@@ -68,7 +68,7 @@ module.exports = {
         rating: game.rating,
         user: req.user.id,
       })
-
+      res.status(204).send()
     }catch(err){
       console.log(err)
     }
